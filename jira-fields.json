@@ -1,0 +1,1031 @@
+{
+ "standard": "MIL-STD-461G",
+ "issueType": "EMC Test Prosedür Talebi",
+ "workflow": {
+  "statuses": [
+   "Talep",
+   "Bilgi Bekleniyor",
+   "Taslak Hazır",
+   "Mühendis İncelemesi",
+   "Onaylandı",
+   "Revize Gerekli"
+  ],
+  "transitions": [
+   [
+    "Talep",
+    "Bilgi Bekleniyor"
+   ],
+   [
+    "Talep",
+    "Taslak Hazır"
+   ],
+   [
+    "Bilgi Bekleniyor",
+    "Taslak Hazır"
+   ],
+   [
+    "Taslak Hazır",
+    "Mühendis İncelemesi"
+   ],
+   [
+    "Mühendis İncelemesi",
+    "Onaylandı"
+   ],
+   [
+    "Mühendis İncelemesi",
+    "Revize Gerekli"
+   ],
+   [
+    "Revize Gerekli",
+    "Talep"
+   ]
+  ]
+ },
+ "fields": [
+  {
+   "key": "testId",
+   "name": "EMC – Test Türü",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "CE101 – İletilen emisyon, ses frekanslı akımlar, güç hatları",
+    "CE102 – İletilen emisyon, radyo frekanslı potansiyel, güç hatları",
+    "CE106 – İletilen emisyon, anten portu",
+    "CS101 – İletilen alınganlık, güç hatları",
+    "CS103 – İletilen alınganlık, anten portu, intermodülasyon",
+    "CS104 – İletilen alınganlık, anten portu, istenmeyen sinyallerin reddi",
+    "CS105 – İletilen alınganlık, anten portu, çapraz modülasyon",
+    "CS109 – İletilen alınganlık, yapı akımı",
+    "CS114 – İletilen alınganlık, toplu kablo enjeksiyonu",
+    "CS115 – Toplu kablo enjeksiyonu, impuls uyarımı",
+    "CS116 – İletilen alınganlık, sönümlü sinüs geçicileri, kablolar ve güç hatları",
+    "CS117 – İletilen alınganlık, yıldırım kaynaklı geçiciler, kablolar ve güç hatları",
+    "CS118 – İletilen alınganlık, kişi kaynaklı elektrostatik deşarj",
+    "RE101 – Yayılan emisyon, manyetik alan",
+    "RE102 – Yayılan emisyon, elektrik alan",
+    "RE103 – Yayılan emisyon, anten sahte ve harmonik çıkışları",
+    "RS101 – Yayılan alınganlık, manyetik alan",
+    "RS103 – Yayılan alınganlık, elektrik alan",
+    "RS105 – Yayılan alınganlık, geçici elektromanyetik alan"
+   ],
+   "description": "Hangi MIL-STD-461G testi için prosedür isteniyor. Seçime göre diğer alanlar gerekir.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "proje",
+   "name": "EMC – Proje / sözleşme adı",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Testin yapıldığı proje veya sözleşmenin adı. Prosedürün ve test raporunun kimliğinde görünür.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "dokNo",
+   "name": "EMC – Doküman numarası",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Kurumunuzun doküman numaralandırma kuralına göre verilen numara. Bilmiyorsanız boş bırakabilirsiniz.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "eutAd",
+   "name": "EMC – EUT adı",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "EUT (Equipment Under Test), test edilen cihazdır. Adını sözleşme veya spesifikasyondaki gibi yazın.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "eutPN",
+   "name": "EMC – EUT parça no",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Cihazın parça numarası. Rapor izlenebilirliği için yazılır.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "eutSN",
+   "name": "EMC – EUT seri no",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Test edilen cihazın seri numarası. Aynı model birden fazla cihaz varsa hangisinin test edildiğini gösterir.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "platform",
+   "name": "EMC – Kurulum platformu (Tablo V)",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "Yüzey gemileri",
+    "Denizaltılar",
+    "Hava aracı – Kara Kuvvetleri (flight line dahil)",
+    "Hava aracı – Deniz Kuvvetleri",
+    "Hava aracı – Hava Kuvvetleri",
+    "Uzay sistemleri ve fırlatma araçları",
+    "Kara – Kara Kuvvetleri",
+    "Kara – Deniz Kuvvetleri",
+    "Kara – Hava Kuvvetleri"
+   ],
+   "description": "Cihazın kurulacağı platform (uçak, gemi, kara aracı vb.). Standart hangi testin uygulanacağını bu seçime göre belirler (Tablo V). Seçince test düğmelerinde A / L / S durumu görünür.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "guc",
+   "name": "EMC – EUT güç girişi",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "28 V DC",
+    "270 V DC",
+    "115 V AC 400 Hz",
+    "115 V AC 60 Hz",
+    "230 V AC 50 Hz",
+    "Diğer (aşağıya yazın)"
+   ],
+   "description": "Cihazın aldığı güç türü. CE101, CE102 ve CS101'de limitler, LISN seçimi ve düzen buna bağlıdır.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "gucNot",
+   "name": "EMC – Güç girişi ek bilgi (akım, faz, güç hattı sayısı)",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Akım, faz sayısı ve güç hattı sayısı gibi ayrıntılar. Özellikle DC gemi/denizaltı CE101 limiti yük akımına bağlıdır.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "modlar",
+   "name": "EMC – EUT çalışma modları",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Cihazın çalışma modları. Test, en çok emisyon veren veya en kolay etkilenen modda yapılmalıdır; mühendisle birlikte karar verin.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "limitKaynak",
+   "name": "EMC – Uygulanacak limit / seviye (uyarlama sonrası)",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Standart limitleri 'temel' değerler olarak verir; sözleşme veya ICD bunları değiştirebilir (uyarlama, tailoring). Burada test için geçerli son değeri veya şekil numarasını yazın.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "lab",
+   "name": "EMC – Test laboratuvarı",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Testin yapılacağı laboratuvarın adı.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "muh",
+   "name": "EMC – Test mühendisi",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Prosedürü kontrol edip onaylayacak test mühendisi.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "tarih",
+   "name": "EMC – Planlanan test tarihi",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Testin planlanan tarihi.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "tailor",
+   "name": "EMC – Standarttan sapma / uyarlama notları",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Standarttan sapma veya sözleşmedeki uyarlamaları buraya yazın (örn. 'RE102 üst sınır 1 GHz'e indirildi'). Prosedüre notu olarak eklenir.",
+   "appliesTo": [
+    "CE101",
+    "CE102",
+    "CE106",
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RE101",
+    "RE102",
+    "RE103",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "hatlar",
+   "name": "EMC – Ölçülecek güç hatları (dönüşler dahil)",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Ölçülecek güç hatları. Standart, dönüşler dahil her giriş güç hattının ayrı ayrı ölçülmesini ister (örn. +28 V ve 28 V dönüş).",
+   "appliesTo": [
+    "CE101",
+    "CE102"
+   ],
+   "requiredFor": [
+    "CE101",
+    "CE102"
+   ]
+  },
+  {
+   "key": "yukAkim",
+   "name": "EMC – Nominal yük akımı (A)",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "DC gemi/denizaltı CE101 limiti yük akımına göre gevşetilir (3 A üstünde 20·log(I/3) kadar). Nominal yük akımını yazın.",
+   "appliesTo": [
+    "CE101"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "tarama",
+   "name": "EMC – Alıcı türü",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "Adım ayarlı alıcı",
+    "Analog ayarlı alıcı",
+    "FFT alıcı"
+   ],
+   "description": "Alıcı türü (adım ayarlı, analog veya FFT). Tablo II'deki bekleme ve ölçüm süreleri seçime göre değişir.",
+   "appliesTo": [
+    "CE102",
+    "RE102"
+   ],
+   "requiredFor": [
+    "CE102",
+    "RE102"
+   ]
+  },
+  {
+   "key": "fTemel",
+   "name": "EMC – Verici temel frekansı / çalışma aralığı",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Vericinin temel çalışma frekansı veya aralığı. CE106 ve RE103'te bu bandın ±%5'i kadar alan test dışıdır.",
+   "appliesTo": [
+    "CE106",
+    "RE103"
+   ],
+   "requiredFor": [
+    "CE106",
+    "RE103"
+   ]
+  },
+  {
+   "key": "pTepe",
+   "name": "EMC – Verici tepe gücü",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Verici tepe gücü. Gemilerde dışlama bandının genişliği ve ölçüm ekipmanının koruması buna bağlıdır.",
+   "appliesTo": [
+    "CE106",
+    "RE103"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "performans",
+   "name": "EMC – İzlenecek fonksiyonlar ve performans kriteri",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Alınganlık testlerinde 'geçti/kaldı' kararı, cihazın hangi fonksiyonunun izleneceğine ve ne kadar sapmanın kabul edileceğine bağlıdır. Bu bilgi cihaz spesifikasyonundan alınır.",
+   "appliesTo": [
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RS101",
+    "RS103",
+    "RS105"
+   ],
+   "requiredFor": [
+    "CS101",
+    "CS103",
+    "CS104",
+    "CS105",
+    "CS109",
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117",
+    "CS118",
+    "RS101",
+    "RS103",
+    "RS105"
+   ]
+  },
+  {
+   "key": "faz",
+   "name": "EMC – Güç şebekesi yapısı",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "DC veya tek faz AC",
+    "Üç faz yıldız (4 hat)",
+    "Üç faz üçgen"
+   ],
+   "description": "CS101 düzeni güç şebekesine göre değişir (tek faz/DC, üç faz yıldız veya üçgen).",
+   "appliesTo": [
+    "CS101"
+   ],
+   "requiredFor": [
+    "CS101"
+   ]
+  },
+  {
+   "key": "izleme",
+   "name": "EMC – İzleme yöntemi",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Test sırasında cihazın neresinden ne izleneceği (örn. çıkış gerilimi, veri hattı hata sayacı). Alınganlıkta karar bu izlemeye dayanır.",
+   "appliesTo": [
+    "CS101"
+   ],
+   "requiredFor": [
+    "CS101"
+   ]
+  },
+  {
+   "key": "alici",
+   "name": "EMC – Alıcı tipi ve çalışma frekansları",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "CS103/104/105 alıcı ön uç testleridir; alıcı tipi ve çalışma frekansları prosedürü belirler (Ek A).",
+   "appliesTo": [
+    "CS103",
+    "CS104",
+    "CS105"
+   ],
+   "requiredFor": [
+    "CS103",
+    "CS104",
+    "CS105"
+   ]
+  },
+  {
+   "key": "calisma",
+   "name": "EMC – EUT çalışma frekansı ve duyarlılığı",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "CS109 yalnızca çalışma frekansı ≤100 kHz ve duyarlılığı 1 µV veya daha iyi cihazlara uygulanır; bu bilgileri yazın.",
+   "appliesTo": [
+    "CS109"
+   ],
+   "requiredFor": [
+    "CS109"
+   ]
+  },
+  {
+   "key": "ortam",
+   "name": "EMC – Kurulum ortamı (Tablo sütunu)",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "Hava aracı – dış veya emniyet kritik",
+    "Hava aracı – iç",
+    "Tüm gemiler (güverte üstü ve açıkta güverte altı) ve denizaltı dışı",
+    "Gemiler (metalik, güverte altı)",
+    "Gemiler (metalik olmayan, güverte altı)",
+    "Denizaltı (iç)",
+    "Kara",
+    "Uzay"
+   ],
+   "description": "Cihazın platform içindeki konumu (dışarıda mı, içeride mi, hangi güverte). CS114 eğrisi ve RS103 alan seviyesi tabloda bu sütuna göre okunur.",
+   "appliesTo": [
+    "CS114",
+    "RS103"
+   ],
+   "requiredFor": [
+    "CS114",
+    "RS103"
+   ]
+  },
+  {
+   "key": "kablolar",
+   "name": "EMC – Test edilecek kablo demetleri ve güç hatları",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Cihazın konektörlerine bağlı kablo demetlerinin listesi. CS testlerinde her konektöre bağlı her demet ayrı test edilir; güç kabloları ayrıca gruplanır.",
+   "appliesTo": [
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117"
+   ],
+   "requiredFor": [
+    "CS114",
+    "CS115",
+    "CS116",
+    "CS117"
+   ]
+  },
+  {
+   "key": "ekFrekans",
+   "name": "EMC – Platform rezonansı gibi ek kritik frekanslar",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "CS116'da platformun rezonans frekansı gibi kritik frekanslar varsa, standart listesine ek olarak test edilir.",
+   "appliesTo": [
+    "CS116"
+   ],
+   "requiredFor": []
+  },
+  {
+   "key": "kurulum",
+   "name": "EMC – Kurulum alanı",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "İç ekipman",
+    "Dış ekipman",
+    "Kompozit gövde/yapıda yönlendirilmiş"
+   ],
+   "description": "CS117 seviyeleri cihazın iç mi dış mı kurulduğuna (ve kompozit yapı olup olmadığına) göre Tablo VII'den seçilir.",
+   "appliesTo": [
+    "CS117"
+   ],
+   "requiredFor": [
+    "CS117"
+   ]
+  },
+  {
+   "key": "esdSeviye",
+   "name": "EMC – ESD test seviyesi (Tablo VIII)",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "Seviye 1 (±2 kV hava)",
+    "Seviye 2 (±4 kV hava)",
+    "Seviye 3 (±8 kV temas/hava)",
+    "Seviye 4 (±15 kV hava)"
+   ],
+   "description": "CS118 seviyeleri Tablo VIII'dedir (Seviye 1: ±2 kV hava … Seviye 4: ±15 kV hava). Sözleşme hangi seviyeyi istiyorsa onu seçin.",
+   "appliesTo": [
+    "CS118"
+   ],
+   "requiredFor": [
+    "CS118"
+   ]
+  },
+  {
+   "key": "noktalar",
+   "name": "EMC – Test noktaları (kullanıcı erişimli yüzeyler)",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Operatörün veya kurucunun normal kullanımda dokunabildiği yüzeyler (tuş takımı, anahtar, LED, konektör kovanı vb.). ESD bu noktalara uygulanır.",
+   "appliesTo": [
+    "CS118"
+   ],
+   "requiredFor": [
+    "CS118"
+   ]
+  },
+  {
+   "key": "yuzeyler",
+   "name": "EMC – Taranacak/test edilecek EUT yüzleri ve konektörler",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "Taranacak cihaz yüzleri ve konektörler. Manyetik alan testlerinde her yüz ve her elektrik konektörü ayrı taranır.",
+   "appliesTo": [
+    "RE101",
+    "RS101"
+   ],
+   "requiredFor": [
+    "RE101",
+    "RS101"
+   ]
+  },
+  {
+   "key": "anten",
+   "name": "EMC – Kullanılacak antenler (tip, model, anten faktörü sertifika tarihi)",
+   "jiraType": "Text Field (multi-line)",
+   "type": "textarea",
+   "description": "RE102'de kullanılacak anten tipleri ve anten faktörü kalibrasyon bilgisi. Frekans bandına göre çubuk, biconical ve horn antenleri kullanılır.",
+   "appliesTo": [
+    "RE102"
+   ],
+   "requiredFor": [
+    "RE102"
+   ]
+  },
+  {
+   "key": "fUst",
+   "name": "EMC – Üst frekans sınırı",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "30 MHz",
+    "200 MHz",
+    "1 GHz",
+    "6 GHz",
+    "18 GHz"
+   ],
+   "description": "RE102 üst frekans sınırı. Cihazın en yüksek çalışma frekansına ve platform aralığına göre seçilir.",
+   "appliesTo": [
+    "RE102"
+   ],
+   "requiredFor": [
+    "RE102"
+   ]
+  },
+  {
+   "key": "fUstRS",
+   "name": "EMC – Üst frekans sınırı (RS103)",
+   "jiraType": "Select List (single choice)",
+   "type": "select",
+   "options": [
+    "1 GHz",
+    "2 GHz",
+    "6 GHz",
+    "18 GHz",
+    "40 GHz"
+   ],
+   "description": "RS103 üst frekans sınırı. 18–40 GHz isteğe bağlıdır; sözleşme belirtirse seçilir.",
+   "appliesTo": [
+    "RS103"
+   ],
+   "requiredFor": [
+    "RS103"
+   ]
+  },
+  {
+   "key": "yuzler",
+   "name": "EMC – Test edilecek EUT yüzleri",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "Alan uygulanacak cihaz yüzleri. Her yüz, ışınlanan alanın anten ışın genişliği içinde kalacak şekilde test edilir.",
+   "appliesTo": [
+    "RS103"
+   ],
+   "requiredFor": [
+    "RS103"
+   ]
+  },
+  {
+   "key": "yonelim",
+   "name": "EMC – EUT yönelimleri",
+   "jiraType": "Text Field (single line)",
+   "type": "text",
+   "description": "RS105'te cihaz mümkünse birbirine dik yönelimlerde test edilir; kullanılacak yönelimleri yazın.",
+   "appliesTo": [
+    "RS105"
+   ],
+   "requiredFor": [
+    "RS105"
+   ]
+  }
+ ]
+}

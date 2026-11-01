@@ -1,0 +1,1 @@
+{"name":"emc-prosedur-servisi","version":"0.1.0","private":true,"description":"MIL-STD-461G test prosedürü taslağı üreten servis ve Jira entegrasyonu","main":"server.js","scripts":{"start":"node server.js","test":"node test/e2e.js","build":"python3 build-core.py && node build-mapping.js"},"engines":{"node":">=18"}}

@@ -1,0 +1,9 @@
+{
+ "testId": "RE102",
+ "fields": {
+  "proje": "Örnek Proje", "eutAd": "Örnek EUT",
+  "platform": "Hava aracı – Kara Kuvvetleri (flight line dahil)", "guc": "28 V DC",
+  "modlar": "Normal çalışma modu", "limitKaynak": "Şekil RE102-3 (sözleşmeye göre)",
+  "anten": "Çubuk, biconical, çift sırtlı horn", "fUst": "18 GHz", "tarama": "Adım ayarlı alıcı"
+ }
+}

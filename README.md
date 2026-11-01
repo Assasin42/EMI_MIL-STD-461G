@@ -438,5 +438,3 @@ The `core.js` file is regenerated using the `npm run build` command.
 - Current output formats are Markdown and HTML. DOCX/PDF generation may be added in the future.
 - For partial test implementations (CE106, CS103–105, CS109, CS117, CS118, and RE103), Section 14 of the generated procedure draft must be completed using the relevant standard requirements.
 - Requester permissions, issue confidentiality, and data retention policies must be defined in accordance with the organization's IT security policies.
-
----
